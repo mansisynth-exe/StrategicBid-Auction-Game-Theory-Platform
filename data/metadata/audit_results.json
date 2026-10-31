@@ -1,0 +1,156 @@
+{
+  "provenance": {
+    "source_title": "Online Auctions Dataset",
+    "zenodo_record_url": "https://zenodo.org/records/11259259",
+    "doi": "10.5281/zenodo.11259259",
+    "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+    "original_zip_name": "Online Auctions Dataset.zip",
+    "original_zip_size_bytes": 140435,
+    "original_zip_sha256": "a25dfdd0c4204d9f1b62983c3991ed5deef18bfdfe10c534852749a242807e4b",
+    "auction_csv_size_bytes": 1043530,
+    "auction_csv_sha256": "c05d10bafd4f33aadb2c70ab562a23937bd11c8d32a7c73244c829c06302486e",
+    "swarovski_csv_size_bytes": 5827,
+    "swarovski_csv_sha256": "def9ece464853db6e91c71e7f0eeb54853bec1872ef0da4df3984b1146bc0907"
+  },
+  "auction_csv": {
+    "total_rows": 10681,
+    "total_columns": 9,
+    "columns": [
+      "auctionid",
+      "bid",
+      "bidtime",
+      "bidder",
+      "bidderrate",
+      "openbid",
+      "price",
+      "item",
+      "auction_type"
+    ],
+    "dtypes": {
+      "auctionid": "int64",
+      "bid": "float64",
+      "bidtime": "float64",
+      "bidder": "str",
+      "bidderrate": "float64",
+      "openbid": "float64",
+      "price": "float64",
+      "item": "str",
+      "auction_type": "str"
+    },
+    "missing_values": {
+      "auctionid": 0,
+      "bid": 0,
+      "bidtime": 0,
+      "bidder": 16,
+      "bidderrate": 11,
+      "openbid": 0,
+      "price": 0,
+      "item": 0,
+      "auction_type": 0
+    },
+    "exact_duplicates": 0,
+    "unique_auctions": 628,
+    "unique_bidders": 3387,
+    "items": {
+      "Palm Pilot M515 PDA": 5917,
+      "Xbox game console": 2811,
+      "Cartier wristwatch": 1953
+    },
+    "auction_types": {
+      "7 day auction": 7041,
+      "3 day auction": 2023,
+      "5 day auction": 1617
+    }
+  },
+  "auction_aggregates": {
+    "bids_per_auction": {
+      "mean": 17.00796178343949,
+      "median": 16.0,
+      "std": 10.885877495792501,
+      "min": 1,
+      "max": 75,
+      "count_1_bid": 21,
+      "count_2_bids": 21,
+      "count_gte_3_bids": 586
+    },
+    "bidders_per_auction": {
+      "mean": 8.237261146496815,
+      "median": 8.0,
+      "std": 4.573630836194874,
+      "min": 1,
+      "max": 24,
+      "count_1_bidder": 24,
+      "count_2_bidders": 46,
+      "count_gte_3_bidders": 558
+    },
+    "uniformity": {
+      "non_uniform_openbid_auctions": 1,
+      "non_uniform_price_auctions": 0,
+      "non_uniform_item_auctions": 0,
+      "non_uniform_type_auctions": 0
+    }
+  },
+  "pricing_consistency": {
+    "price_eq_max_bid_count": 626,
+    "price_gt_max_bid_count": 1,
+    "price_lt_max_bid_count": 1,
+    "price_lt_openbid_count": 0,
+    "anomalous_auctions": [
+      {
+        "auctionid": 3016587753,
+        "bids_count": 1,
+        "max_bid": 5.0,
+        "price": 255.0,
+        "openbid_min": 0.01,
+        "openbid_max": 0.01,
+        "item": "Palm Pilot M515 PDA"
+      },
+      {
+        "auctionid": 3017736272,
+        "bids_count": 5,
+        "max_bid": 255.0,
+        "price": 238.0,
+        "openbid_min": 175.0,
+        "openbid_max": 175.0,
+        "item": "Palm Pilot M515 PDA"
+      },
+      {
+        "auctionid": 3019271858,
+        "bids_count": 28,
+        "max_bid": 245.0,
+        "price": 245.0,
+        "openbid_min": 0.01,
+        "openbid_max": 1.0,
+        "item": "Palm Pilot M515 PDA"
+      }
+    ]
+  },
+  "swarovski_csv": {
+    "total_rows": 200,
+    "total_columns": 5,
+    "columns": [
+      "Seller",
+      "Bidder",
+      "Weight",
+      "Bidder.Volume",
+      "Seller.Volume"
+    ],
+    "dtypes": {
+      "Seller": "int64",
+      "Bidder": "int64",
+      "Weight": "int64",
+      "Bidder.Volume": "int64",
+      "Seller.Volume": "int64"
+    },
+    "missing_values": {
+      "Seller": 0,
+      "Bidder": 0,
+      "Weight": 0,
+      "Bidder.Volume": 0,
+      "Seller.Volume": 0
+    },
+    "unique_sellers": 49,
+    "unique_bidders": 191,
+    "notes": "swarovski.csv contains aggregate network/volume transaction data between sellers and bidders, lacking auctionid, individual bids, and timestamps. Therefore, auction.csv is the primary micro-level bidding dataset for game-theoretic analysis."
+  }
+}

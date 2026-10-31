@@ -1,0 +1,30 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Large raw archives & local temporary extractions
+data/raw/*.zip
+data/raw/extracted/
+data/processed/*.csv
+
+# Streamlit local state
+.streamlit/
+
+# OS specific
+.DS_Store
+Thumbs.db
